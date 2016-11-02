@@ -1,4 +1,4 @@
-var $btn = $('#request'),
+let $btn = $('#request'),
     $bio = $('#bio');
 
 $btn.on('click', function() {
@@ -9,6 +9,6 @@ $btn.on('click', function() {
 function responseFunction(responseText, textStatus, request) {
   $bio.css('border', '1px solid #e8e8e8');
   if(textStatus == 'error') {
-      $bio.text('An error occurred during your request: ' +  request.status + ' ' + request.statusText);
+      $bio.text(`An error occurred during your request: ${request.status} ${request.statusText}`);
   }
 }
